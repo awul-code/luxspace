@@ -1,9 +1,16 @@
-
+import { BrowserRouter, Routes, Route } from "react-router";
+import Hompage from "./pages/hompage";
+import Errorpage from "./pages/errorpage";
 function App() {
 
   return (
     <>
-      <h1 className="text-3xl font-bold underline">Tailwind done</h1>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Hompage />} />
+          <Route path="*" element={<Errorpage />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
