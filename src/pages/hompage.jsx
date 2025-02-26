@@ -10,7 +10,7 @@ import Footer from '../parts/Footer/index';
 const Hompage = () => {
     return (
         <>
-            <Header />
+            <Header theme="white" position={"absolute"} />
             <Hero />
             <BrowseTheRoom />
             <JustArrived />

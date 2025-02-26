@@ -8,7 +8,7 @@ import Breadcrumb from '../components/Breadcrumb/index';
 const Productdetail = () => {
     return (
         <>
-            <Header />
+            <Header theme="black" position="relative" />
             <Breadcrumb lists={[
                 { url: "/", name: "Home" },
                 { url: "/categories/91231", name: "Office Room" },
