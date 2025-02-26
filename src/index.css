@@ -1,5 +1,28 @@
 @import "tailwindcss";
 
+/* utils */
+
+.grid {
+	grid-auto-flow: row dense;
+	grid-auto-rows: minmax(180px, auto);
+}
+
+.stretched-link {
+	@apply absolute inset-0 z-10;
+}
+
+/* card */
+
+.card .card-shadow {
+	@apply transition duration-300 shadow-none h-full;
+}
+
+.card:hover .card-shadow {
+	@apply shadow-lg;
+}
+
+/* overlay */
+
 .overlay {
 	@apply absolute;
 }
@@ -18,10 +41,9 @@
 
 .overlay .video {
 	@apply absolute transform bg-blue-200 bg-no-repeat bg-center w-20 h-20 rounded-full items-center justify-center flex -translate-x-1/2 -translate-y-1/2;
-	background-image: url("/images/content/icon-play.svg");
+	background-image: url("../images/content/icon-play.svg#icon-play");
 	top: 50%;
 	left: 50%;
-	cursor: pointer;
 }
 
 @media only screen and (max-width: 768px) {
@@ -30,13 +52,14 @@
 		min-height: 90vh;
 	}
 	.hero .hero-cta {
-		@apply w-15 h-15;
-		transform: translateX(-75px) translateY(-0%);
+		@apply w-12 h-12;
+		transform: translateX(-75px) translateY(-50%);
 		background-size: 37.5%;
 	}
 }
 
-/* Breadcrumb */
+/* breadcrumb */
+
 ul.breadcrumb {
 	@apply flex flex-row items-center text-lg;
 }
@@ -52,4 +75,60 @@ ul.breadcrumb li:not(:last-child) a {
 
 ul.breadcrumb li:last-child a {
 	@apply font-semibold;
+}
+
+/* slider */
+
+.slider {
+	@apply flex my-4 flex-col;
+}
+
+.slider .thumbnail {
+	@apply w-screen order-last -mx-2 overflow-auto flex pl-4;
+}
+
+.slider .thumbnail .item {
+	@apply rounded bg-gray-100 relative rounded-lg mb-4 cursor-pointer;
+	width: 106px;
+	height: 106px;
+}
+
+.slider .thumbnail .item:after {
+	content: "";
+	@apply transition duration-200 absolute inset-0 bg-black opacity-0 border-2 border-black/50 rounded-lg;
+}
+
+.slider .thumbnail .item.selected:after {
+	content: "";
+	@apply opacity-25 border-black;
+}
+
+.slider .preview {
+	@apply mb-4 px-4;
+	height: 320px;
+}
+
+@media only screen and (min-width: 768px) {
+	.slider {
+		@apply flex-row;
+	}
+	.slider .thumbnail {
+		@apply w-auto order-first block overflow-visible pl-0;
+	}
+	.slider .preview {
+		height: 600px;
+		width: 560px;
+	}
+}
+
+a.cart svg g circle.dot {
+	@apply hidden;
+}
+
+a.cart.cart-filled svg g circle.dot {
+	@apply block;
+}
+
+button[disabled] {
+	@apply bg-gray-300 hover:bg-gray-300 text-gray-400 hover:text-gray-400 cursor-not-allowed;
 }
