@@ -17,7 +17,7 @@ const BrowseTheRoom = () => {
                         >
                             <div className="card-shadow rounded-xl">
                                 <img
-                                    src="../public/assets/images/content/image-catalog-1.png"
+                                    src="/images/content/image-catalog-1.png"
                                     alt=""
                                     className="w-full h-full object-cover object-center overlay overflow-hidden rounded-xl"
                                 />
@@ -36,7 +36,7 @@ const BrowseTheRoom = () => {
                         >
                             <div className="card-shadow rounded-xl">
                                 <img
-                                    src="../public/assets/images/content/image-catalog-3.png"
+                                    src="/images/content/image-catalog-3.png"
                                     alt=""
                                     className="w-full h-full object-cover object-center overlay overflow-hidden rounded-xl"
                                 />
@@ -55,7 +55,7 @@ const BrowseTheRoom = () => {
                         >
                             <div className="card-shadow rounded-xl">
                                 <img
-                                    src="../public/assets/images/content/image-catalog-4.png"
+                                    src="/images/content/image-catalog-4.png"
                                     alt=""
                                     className="w-full h-full object-cover object-center overlay overflow-hidden rounded-xl"
                                 />
@@ -74,7 +74,7 @@ const BrowseTheRoom = () => {
                         >
                             <div className="card-shadow rounded-xl">
                                 <img
-                                    src="../public/assets/images/content/image-catalog-2.png"
+                                    src="/images/content/image-catalog-2.png"
                                     alt=""
                                     className="w-full h-full object-cover object-center overlay overflow-hidden rounded-xl"
                                 />

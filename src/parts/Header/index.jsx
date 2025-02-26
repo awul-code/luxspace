@@ -10,7 +10,7 @@ const Header = () => {
                         <div className="w-56 items-center flex">
                             <Link to={"/"}>
                                 <img
-                                    src="../public/assets/images/content/logo.png"
+                                    src="/images/content/logo.png"
                                     alt="Luxspace | Fulfill your house with beautiful furniture"
                                 />
                             </Link>
